@@ -1,0 +1,39 @@
+#71200595 Gerry Sunjay Junjung
+''' Abas ditugaskan oleh Gurunya untuk mengiringi teman-temannya latihan pada perlombaan yang akan diadakan besok,
+    dikarenakan teman yang seharusnya mengiringi sedang sakit, kemudian dia kebingungan ketika diminta untuk menaikan nada
+    gitarnya, kemudian Abas meminta saya untuk membuat sebuah pemrograman untuk mengubah chord gitar sesuai keinginan teman temannya.
+    
+    Dengan nada dasar Do = C menjadi Do = A
+    Dengan Chord sebagai berikut 
+    D = B 
+    F = D
+    G = E
+    C = A
+    E = C#
+    set = {}
+    tuple = ()
+    list = []
+    '''
+    
+print (8*'=',' Convert Chord Mayor ','='*8)
+awal = str(input('Masukkan Nada Dasar Awal, Do = '))
+A = ['A','B','C#','D','E','F#','G#']
+B = ['B','C#','D#','E','F#','G#','A#']
+C = ['C','D','E','F','G','A','B']
+D = ['D','E','F#','G','A','B','C#']
+E = ['E','F#','G#','A','B','C#','D#']
+F = ['F#','G#','A#','B','C#','D#','E#']
+G = ['G','A','B','C','D','E','F#']
+
+masuk = set()
+jumlah = int(input('Jumlah Chord : '))
+jumlah += 1
+#Perulangan Inputan
+for i in range(1,jumlah):
+    masukkan = str(input(f'Masukkan Kunci Ke {i} : '))
+    masuk.add(masukkan)
+print (masuk)
+# Convert Chordnya
+for ubah in masuk:
+    temukan_chord = C.index(ubah)
+    print (f'Convert {ubah} = ',A[temukan_chord])
